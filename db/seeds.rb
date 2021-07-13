@@ -41,3 +41,30 @@ Drivers = Driver.create([
     date_of_birth: "1990-01-01 00:00:00 IDT"
    },
 ])
+
+CarsDrivers = CarDriver.create([
+    {
+        car:Car.find(1),
+        driver: Driver.find(1)
+    },
+    {
+        car:Car.find(2),
+        driver: Driver.find(1)
+    },
+    {
+        car:Car.find(3),
+        driver: Driver.find(1)
+    },
+    {
+        car:Car.find(2),
+        driver: Driver.find(2)
+    },
+    {
+        car:Car.find(3),
+        driver: Driver.find(2)
+    },
+    {
+        car:Car.find(4),
+        driver: Driver.find(2)
+    }
+])

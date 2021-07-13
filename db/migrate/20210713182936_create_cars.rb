@@ -4,7 +4,6 @@ class CreateCars < ActiveRecord::Migration[6.1]
       t.string :title, null:false
       t.string :kind, default: 'sport'
       t.string :color, default: 'blue'
-
       t.timestamps
     end
   end
