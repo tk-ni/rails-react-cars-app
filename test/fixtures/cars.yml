@@ -2,10 +2,10 @@
 
 one:
   title: MyString
-  type: 
+  kind: MyString
   color: MyString
 
 two:
   title: MyString
-  type: 
+  kind: MyString
   color: MyString
