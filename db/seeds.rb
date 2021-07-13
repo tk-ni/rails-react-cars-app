@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-cars = Car.create([
+Cars = Car.create([
     {
         title: "Volvo",
         kind: "wagon",
@@ -29,7 +29,7 @@ cars = Car.create([
     }
 ])
 
-drivers = Driver.create([
+Drivers = Driver.create([
    {
     name: "David",
     email: "david@cnvrg.io",
