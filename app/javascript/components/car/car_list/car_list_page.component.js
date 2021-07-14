@@ -37,7 +37,10 @@ const CarListPage = () => {
 
     return (<>
         {loading ? <Spinner /> : error ? <ErrorComponent e={error} /> :
-            cars.map(car => <SingleCarListItem key={car.id} {...car} />)
+            <>
+                <p className="title">Cars</p>
+                {cars.map(car => <SingleCarListItem key={car.id} {...car} />)}
+            </>
         }
     </>)
 }

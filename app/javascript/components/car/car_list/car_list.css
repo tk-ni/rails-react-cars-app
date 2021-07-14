@@ -1,0 +1,24 @@
+.single-car-list-item{
+    padding:10px;
+    margin:10px;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.single-car-list-item:hover{
+    transform: translateY(-10px);
+}
+
+.single-car-list-item .car-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin:0;
+}
+.single-car-list-item .car-id{
+    opacity: .3;
+    margin-left: 5px;
+    font-size: .8rem;
+}
+
+.single-car-list-item .car-kind, .single-car-list-item .car-color{
+    text-transform: capitalize;
+}

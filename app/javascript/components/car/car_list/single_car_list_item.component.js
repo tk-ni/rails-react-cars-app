@@ -1,15 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Card from '@material-ui/core/Card';
 
 const SingleCarListItem = ({ attributes, id }) => {
     return (
         <Link to={`/car/${id}`}>
-            <div className="single-car-list-item">
-                {attributes.title}
-                {attributes.kind}
-                {attributes.color}
-                {id}
-            </div>
+            <Card className="single-car-list-item">
+                <p className="car-title">
+                    {attributes.title}
+                    <span className="car-id">
+                        #{id}
+                    </span>
+                </p>
+                <p className="car-kind">
+                    Car Kind: {attributes.kind}
+                </p>
+                <p className="car-color">
+                    Car Color: {attributes.color}
+                </p>
+
+            </Card>
         </Link>)
 }
 
