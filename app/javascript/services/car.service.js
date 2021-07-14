@@ -19,3 +19,18 @@ export const getCars = async () => {
 
     return cars;
 }
+
+export const getCarById = async (car_id) =>{
+    let res = await axios.get(URL.API.CARS.GET.getCarById(car_id));
+    if(res.status !== 200){
+        return false;
+    }
+
+    if(!res.data?.data){
+        return false;
+    }
+
+    let car = {...res.data.data};
+
+    return car;
+}

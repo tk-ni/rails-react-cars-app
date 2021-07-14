@@ -17,7 +17,7 @@ const CarListPage = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
 
-    const getCarData = useCallback(async () => {
+    const getCarsData = useCallback(async () => {
         setLoading(true);
         let data = await getCars();
         if (data) {
@@ -29,11 +29,11 @@ const CarListPage = () => {
     }, [])
 
     useEffect(() => {
-        getCarData();
+        getCarsData();
         return () => {
             setCars([]);
         }
-    }, [getCarData]);
+    }, [getCarsData]);
 
     return (<>
         {loading ? <Spinner /> : error ? <ErrorComponent e={error} /> :

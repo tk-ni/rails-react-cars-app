@@ -15,6 +15,12 @@ module Api
                 end
             end
 
+            def car_by_id
+                id = params[:car_id]
+                car = Car.find(id)
+                render json: CarSerializer.new(car).serialized_json
+            end
+
             def car_drivers
                 id = params[:car_id]
                 drivers = Car.find(id).drivers

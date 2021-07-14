@@ -20,7 +20,7 @@ const App = () => {
         <Switch>
             <Route exact path="/" render={() => <Home />} />
 
-            <Route exact path="/car-list" render={() => <CarListPage />} />
+            <Route exact path="/car/list" render={() => <CarListPage />} />
             <Route exact path="/car/:id" render={(props)=> <SingleCarPage {...props}/>} />
             <Route exact path="/car/new" render={() => <NewCarPage />} />
 
