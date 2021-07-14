@@ -1,12 +1,26 @@
-import React, { useEffect } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
+import { getCars } from './../../../services/car.service';
+import SingleCarListItem from './single_car_list_item.component';
 
-const CarListPage = () =>{
+const CarListPage = () => {
+    const [cars, setCars] = useState([]);
+    const [loading, setLoading] = useState(false);
 
-    useEffect(()=>{
-        
-    }, []);
+    const getCarData = useCallback(async () => {
+        setLoading(true);
+        let data = await getCars();
+        console.log(data);
+        setCars(data);
+        setLoading(false);
+    }, [])
 
-    return(<div>Car list page</div>)
+    useEffect(() => {
+        getCarData();
+    }, [getCarData]);
+
+    return (<>
+    {loading ? 'Loading...' : cars.map(car => <SingleCarListItem {...car}/>)}
+    </>)
 }
 
 export default CarListPage;
