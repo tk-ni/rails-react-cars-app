@@ -3,8 +3,12 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :cars
-      resources :drivers
+      resources :cars do
+        get :car_drivers
+      end
+      resources :drivers do
+        get :driver_cars
+      end
     end
   end
 

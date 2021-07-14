@@ -15,6 +15,12 @@ module Api
                 end
             end
 
+            def driver_cars
+                id = params[:driver_id]
+                cars = Driver.find(id).cars
+                render json: cars
+            end
+
             private
 
             def driver_params
