@@ -10,16 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_13_205328) do
-
-  create_table "car_drivers", id: false, force: :cascade do |t|
-    t.integer "car_id", null: false
-    t.integer "driver_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["car_id"], name: "index_car_drivers_on_car_id"
-    t.index ["driver_id"], name: "index_car_drivers_on_driver_id"
-  end
+ActiveRecord::Schema.define(version: 2021_07_14_020053) do
 
   create_table "cars", force: :cascade do |t|
     t.string "title", null: false
@@ -37,6 +28,15 @@ ActiveRecord::Schema.define(version: 2021_07_13_205328) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "car_drivers", "cars"
-  add_foreign_key "car_drivers", "drivers"
+  create_table "link_car_drivers", force: :cascade do |t|
+    t.integer "car_id", null: false
+    t.integer "driver_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["car_id"], name: "index_link_car_drivers_on_car_id"
+    t.index ["driver_id"], name: "index_link_car_drivers_on_driver_id"
+  end
+
+  add_foreign_key "link_car_drivers", "cars"
+  add_foreign_key "link_car_drivers", "drivers"
 end

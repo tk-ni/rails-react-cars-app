@@ -42,7 +42,7 @@ Drivers = Driver.create([
    },
 ])
 
-CarsDrivers = CarDriver.create([
+LinkCarDrivers = LinkCarDriver.create([
     {
         car:Car.find(1),
         driver: Driver.find(1)
