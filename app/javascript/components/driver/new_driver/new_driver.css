@@ -1,0 +1,7 @@
+.new-driver-form .form-body{
+    display: flex;
+}
+.new-driver-form .form-body div, .new-driver-form .form-body button{
+    width:100%;
+    margin-right: 10px;
+}

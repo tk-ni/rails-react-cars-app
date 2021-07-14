@@ -29,7 +29,7 @@ const App = () => {
 
             <Route exact path="/driver/list" render={() => <DriverListPage />} />
             <Route exact path="/driver/new" render={() => <NewDriverPage />} />
-            <Route exact path="/driver/:id" render={()=> <SingleDriverPage />} />
+            <Route exact path="/driver/:id" render={(props)=> <SingleDriverPage {...props} />} />
 
             <Route exact path="/driversandcars" render={() => <DriversAndCarsPage />} />
 

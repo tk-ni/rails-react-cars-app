@@ -92,7 +92,7 @@ const SingleCarPage = (props) => {
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
-                                    {drivers.map(driver =>{
+                                    {drivers.map(driver => {
                                         return <TableRow key={driver.id}>
                                             <TableCell>
                                                 {driver.id}
