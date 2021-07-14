@@ -34,3 +34,23 @@ a{
 .main-menu li:hover{
     transform: translateY(-10px);
 }
+
+.success{
+    padding: 20px;
+    border: 1px solid #a2c428;
+    border-radius: 10px;
+    background-color: #e3eebb;
+    color: #728e0e;
+    margin: 5px;
+    margin-top: 15px;
+}
+
+.error{
+    padding: 20px;
+    border: 1px solid #c42828;
+    border-radius: 10px;
+    background-color: #ebb;
+    color: #8e0e0e;
+    margin: 5px;
+    margin-top: 15px;
+}

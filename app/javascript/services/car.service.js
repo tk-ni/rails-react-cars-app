@@ -56,3 +56,13 @@ export const getCarDrivers = async (car_id) => {
     return drivers;
 
 }
+
+export const addCar = async ({ title, color, kind }) => {
+    const csrf = document.querySelector('[name=csrf-token]').content;
+    axios.defaults.headers.common['X-CSRF-TOKEN'] = csrf;
+    let res = await axios.post(URL.API.CARS.POST.addCar(), { car: { title: title, color: color, kind: kind } });
+    if (res.status !== 200) {
+        return false;
+    }
+    return true;
+}
