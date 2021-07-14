@@ -6,10 +6,7 @@ import App from './../components/app';
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <Router>
-      <Route exact path="/" render={() => <App />} />
-    
-      {/* Handle 404's */}
-      <Route render={() => <App />} />
+      <Route path="/" render={() => <App />} />
     </Router>,
     document.body.appendChild(document.createElement('div')),
   )
