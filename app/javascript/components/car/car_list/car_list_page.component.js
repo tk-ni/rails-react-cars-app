@@ -20,9 +20,9 @@ const CarListPage = () => {
     const getCarData = useCallback(async () => {
         setLoading(true);
         let data = await getCars();
-        if(data){
+        if (data) {
             setCars(data);
-        }else{
+        } else {
             setError(`Can't find any cars!`)
         }
         setLoading(false);
@@ -30,10 +30,15 @@ const CarListPage = () => {
 
     useEffect(() => {
         getCarData();
+        return () => {
+            setCars([]);
+        }
     }, [getCarData]);
 
     return (<>
-    {loading ? <Spinner/> : cars.length > 0 ? cars.map(car => <SingleCarListItem key={car.id} {...car}/>) : <ErrorComponent e={error}/>}
+        {loading ? <Spinner /> : error ? <ErrorComponent e={error} /> :
+            cars.map(car => <SingleCarListItem key={car.id} {...car} />)
+        }
     </>)
 }
 
