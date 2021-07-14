@@ -7,7 +7,7 @@ export const getCars = async () => {
         return false;
     }
 
-    if(!res.data.data){
+    if(!res.data?.data){
         return false;
     }
     
