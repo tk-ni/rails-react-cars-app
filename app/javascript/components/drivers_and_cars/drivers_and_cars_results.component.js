@@ -1,4 +1,7 @@
-import React, { useEffect, useState } from "react"
+//Dependencies
+import React from "react"
+
+//Components
 import CarResultsDisplay from "./car_results_display.component"
 import DriverResultsDisplay from "./driver_results_display.component"
 

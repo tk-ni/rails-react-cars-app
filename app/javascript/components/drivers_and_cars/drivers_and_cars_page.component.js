@@ -3,10 +3,10 @@ import React, { useState } from 'react'
 
 //Components
 import DriversAndCarsForm from './drivers_and_cars_form.component';
+import DriversAndCarsResults from './drivers_and_cars_results.component';
 
 //Styles
 import './drivers_and_cars.css';
-import DriversAndCarsResults from './drivers_and_cars_results.component';
 
 const DriversAndCars = () =>{
     const [resultData, setResultData] = useState(null);

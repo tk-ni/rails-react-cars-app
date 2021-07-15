@@ -14,8 +14,8 @@ import NewDriverPage from './driver/new_driver/new_driver_page.component'
 import SingleDriverPage from './driver/single_driver_page.component'
 
 import DriversAndCarsPage from './drivers_and_cars/drivers_and_cars_page.component'
-// Styles
 
+// Styles
 import './app.css';
 
 const App = () => {

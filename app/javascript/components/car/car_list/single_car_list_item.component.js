@@ -1,5 +1,10 @@
+//Dependencies
 import React from 'react'
+
+//Components
 import { Link } from 'react-router-dom'
+
+//Material UI
 import Card from '@material-ui/core/Card';
 
 const SingleCarListItem = ({ attributes, id }) => {
