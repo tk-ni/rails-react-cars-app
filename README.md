@@ -22,6 +22,8 @@ Once you have made sure your machine has everything installed, you can go ahead 
 
 When in our **rails-react-cars-app** we can install the necessary packages
 > bundle install
+> 
+> yarn
 
 After we've installed all our necessary packages, we need to migrate the database and seed it
 > rails db:migrate
