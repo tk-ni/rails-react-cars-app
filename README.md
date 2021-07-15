@@ -2,7 +2,7 @@
 
 ### Welcome to the React on Rails Interview Assignment README file
 
-This example project is built with Ruby on Rails and React JS
+This example project is built with Ruby on Rails and React JS (with Material UI).
 
 Live demo: https://react-on-rails-cars.herokuapp.com/ 
 
