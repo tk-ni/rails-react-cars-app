@@ -4,6 +4,7 @@ import React, { useState, useCallback, useEffect } from 'react'
 //Components
 import Spinner from '../spinner.component'
 import ErrorComponent from '../error.component'
+import BackHome from '../backhome.component'
 
 // Material UI
 import Table from '@material-ui/core/Table'
@@ -58,7 +59,7 @@ const SingleDriverPage = (props) =>{
     return (<div className="single-driver-page">
     {loading ? <Spinner /> : error ? <ErrorComponent e={error} /> :
         <div className="single-driver-container">
-            <p className="title">{driver?.attributes?.name}
+            <p className="title"><BackHome/> {driver?.attributes?.name}
                 <span className="driver-id">
                     #{driver?.id}
                 </span>

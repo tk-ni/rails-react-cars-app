@@ -5,6 +5,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import Spinner from '../../spinner.component';
 import SingleDriverListItem from './single_driver_list_item.component';
 import ErrorComponent from '../../error.component';
+import BackHome from '../../backhome.component';
 
 //Services
 import { getDrivers } from './../../../services/driver.service';
@@ -38,7 +39,7 @@ const DriverListPage = () =>{
     return (<>
         {loading ? <Spinner /> : error ? <ErrorComponent e={error} /> :
             <>
-                <p className="title">Drivers</p>
+                <p className="title"><BackHome/> Drivers</p>
                 {drivers.map(driver => <SingleDriverListItem key={driver.id} {...driver} />)}
             </>
         }

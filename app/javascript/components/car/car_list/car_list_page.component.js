@@ -5,6 +5,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import Spinner from '../../spinner.component';
 import SingleCarListItem from './single_car_list_item.component';
 import ErrorComponent from '../../error.component';
+import BackHome from '../../backhome.component';
 
 //Services
 import { getCars } from './../../../services/car.service';
@@ -38,7 +39,8 @@ const CarListPage = () => {
     return (<>
         {loading ? <Spinner /> : error ? <ErrorComponent e={error} /> :
             <>
-                <p className="title">Cars</p>
+
+                <p className="title"><BackHome /> Cars</p>
                 {cars.map(car => <SingleCarListItem key={car.id} {...car} />)}
             </>
         }

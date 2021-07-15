@@ -4,6 +4,7 @@ import React, { useState, useCallback, useEffect } from 'react'
 //Components
 import Spinner from '../spinner.component'
 import ErrorComponent from '../error.component'
+import BackHome from '../backhome.component'
 
 // Material UI
 import Table from '@material-ui/core/Table'
@@ -57,7 +58,7 @@ const SingleCarPage = (props) => {
     return (<div className="single-car-page">
         {loading ? <Spinner /> : error ? <ErrorComponent e={error} /> :
             <div className="single-car-container">
-                <p className="title">{car?.attributes?.title}
+                <p className="title"><BackHome/> {car?.attributes?.title}
                     <span className="car-id">
                         #{car?.id}
                     </span>

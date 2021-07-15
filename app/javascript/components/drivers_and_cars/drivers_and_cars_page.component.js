@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 //Components
 import DriversAndCarsForm from './drivers_and_cars_form.component';
 import DriversAndCarsResults from './drivers_and_cars_results.component';
+import BackHome from '../backhome.component';
 
 //Styles
 import './drivers_and_cars.css';
@@ -16,7 +17,7 @@ const DriversAndCars = () =>{
     }
 
     return (<div className="drivers-and-cars">
-            <p className="title">Drivers And Cars</p>
+            <p className="title"><BackHome/> Drivers And Cars</p>
             <DriversAndCarsForm handleGetResults={handleGetResults}/>
             {resultData ? <DriversAndCarsResults category={resultData.category} results={resultData.results}/> : ''}
 
