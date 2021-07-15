@@ -1,0 +1,20 @@
+.drivers-and-cars-form .form-body{
+    display: flex;
+}
+
+.drivers-and-cars-form .form-body div, .drivers-and-cars-form .form-body button{
+    width:100%;
+    margin-right: 10px;
+}
+
+.drivers-and-cars-form .form-body .radio-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    padding:20px;
+}
+
+.drivers-and-cars-form .form-body .text-field > div{
+    height: 100%;
+}
