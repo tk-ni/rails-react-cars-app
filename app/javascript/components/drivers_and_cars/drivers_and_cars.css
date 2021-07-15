@@ -19,3 +19,11 @@
     height: 100%;
 }
 
+.drivers-and-cars-results .results .car-id{
+    opacity: .3;
+    margin-left: 5px;
+    font-size: 1.2rem;
+}
+.drivers-and-cars-results .results .car-kind, .drivers-and-cars-results .results .car-color{
+    text-transform: capitalize;
+}

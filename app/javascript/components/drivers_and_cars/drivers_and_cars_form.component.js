@@ -69,6 +69,7 @@ const DriversAndCarsForm = (props) => {
 
     const handleCategoryChange = (e) => {
         setCategory(e.target.value);
+        setChosenName('');
     }
 
     const handleChosenNameChange = (e) => {
@@ -77,6 +78,7 @@ const DriversAndCarsForm = (props) => {
 
     const handleSubmitClick = async () => {
         setDisabled(true);
+        setError('');
         let valid = validateFromData();
         if (valid) {
             await processFormRequest();

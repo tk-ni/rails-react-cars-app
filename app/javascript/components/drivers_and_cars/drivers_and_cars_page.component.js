@@ -9,18 +9,16 @@ import './drivers_and_cars.css';
 import DriversAndCarsResults from './drivers_and_cars_results.component';
 
 const DriversAndCars = () =>{
-    const [category, setCategory] = useState('');
-    const [results, setResults] = useState(null);
+    const [resultData, setResultData] = useState(null);
 
     const handleGetResults = (category, results) =>{
-        setCategory(category);
-        setResults(results);
+        setResultData({results: results, category: category});
     }
 
     return (<div className="drivers-and-cars">
             <p className="title">Drivers And Cars</p>
             <DriversAndCarsForm handleGetResults={handleGetResults}/>
-            {category && results ? <DriversAndCarsResults category={category} results={results}/> : ''}
+            {resultData ? <DriversAndCarsResults category={resultData.category} results={resultData.results}/> : ''}
 
         </div>)
 }
