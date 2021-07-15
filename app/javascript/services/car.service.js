@@ -66,3 +66,17 @@ export const addCar = async ({ title, color, kind }) => {
     }
     return true;
 }
+
+export const getCarAndDriversByTitle = async (car_title) =>{
+    let res = await axios.get(URL.API.CARS.GET.getCarAndDriversByTitle(car_title));
+    if(res.status !== 200){
+        return false;
+    }
+
+    if(!res.data){
+        return false;
+    }
+
+    let carAndDrivers = {...res.data};
+    return carAndDrivers;
+}

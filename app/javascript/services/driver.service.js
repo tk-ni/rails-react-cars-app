@@ -66,3 +66,17 @@ export const addDriver = async ({ name, email }) => {
     }
     return true;
 }
+
+export const getDriverAndCarsByName = async (driver_name) =>{
+    let res = await axios.get(URL.API.DRIVERS.GET.getDriverAndCarsByName(driver_name));
+    if(res.status !== 200){
+        return false;
+    }
+
+    if(!res.data){
+        return false;
+    }
+
+    let driverAndCars = {...res.data};
+    return driverAndCars;
+}
