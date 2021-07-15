@@ -5,8 +5,14 @@ ruby '3.0.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+# Use sqlite3/pg as the database for Active Record
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+   gem 'pg'
+end
 # Fast JSON Api by Netflix
 gem 'fast_jsonapi'
 # Use Puma as the app server
@@ -53,3 +59,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
