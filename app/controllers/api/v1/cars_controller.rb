@@ -27,6 +27,17 @@ module Api
                 render json: drivers
             end
 
+            def car_drivers_combined
+                title = params[:car_title]
+                car = Car.where('lower(title) = ?', title.downcase).first
+                if car
+                    drivers = car.drivers
+                    render json: {car: car, drivers: drivers}
+                else
+                    render json: {error: "Can't find object"}, status: 404
+                end
+            end
+
             private
 
             def car_params

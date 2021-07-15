@@ -27,6 +27,17 @@ module Api
                 render json: DriverSerializer.new(driver).serialized_json
             end
 
+            def driver_cars_combined
+                name = params[:driver_name]
+                driver = Driver.where('lower(name) = ?', name.downcase).first
+                if driver
+                    cars = driver.cars
+                    render json: {driver: driver, cars: cars}
+                else
+                    render json: {error: "Can't find object"}, status: 404
+                end
+            end
+
             private
 
             def driver_params
